@@ -24,7 +24,7 @@ jobs:
         run: npm ci
 
       - name: Verificar Lint e Tipagem
-        run: npm run lint && npx tsc --noEmit
+        run: npm run lint && npx next typegen && npx tsc --noEmit
 
       - name: Executar Testes
         run: npm test --if-present
